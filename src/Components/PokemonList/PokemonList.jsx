@@ -1,23 +1,26 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import axios from 'axios' ;
+import './PokemonList.css';
 
 function PokemonList() {
+        async function downloadPokemons() {
+            const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
+            console.log(response.data);
+        }
+    
 
     useEffect(() => {
-        console.log("effect called")
+       downloadPokemons();
     }, []);
 
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
 
   return (
-    <>
-        <div>
-            x: {x} <button onClick={() => setX(x+1)}>Inc</button>
+  
+        <div className="pokemon-list-wrapper">
+            Pokemon List
+
         </div>
-        <div>
-            y: {y} <button onClick={() => setY(y+1)}>Inc</button>
-        </div>
-    </>
+   
   )
 }
 
