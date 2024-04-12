@@ -8,7 +8,7 @@ import PokemonList from "../PokemonList/PokemonList.jsx";
 function Pokedex() {
   return (
     <div className="pokedex-wrraper">
-       <h1 id='pokedex-headding'>Pokedex</h1>
+       
       <Search />
       <PokemonList />
     </div>
