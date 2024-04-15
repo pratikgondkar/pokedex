@@ -8,14 +8,14 @@
     letter-spacing: 1rem;
 }
 
-.pokemon-details-type {
+.pokemon-details-types {
     display: flex;
     margin-top: 2rem;
     gap: 3rem;
     font-size: large;
 }
 
-.pokemon-details-type div {
+.pokemon-details-types div {
     border: 1px solid gainsboro;
     border-radius: 15px;
     padding: 1rem;

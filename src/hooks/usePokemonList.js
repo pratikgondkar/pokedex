@@ -16,8 +16,8 @@ function usePokemonList(url, type) {
 
         const pokemonResults = response.data.results; // we get the array of pokemons from results
 
-        console.log("response ise",response.data.pokemon);
-        console.log(pokemonListState)
+        
+        
         setPokemonListState((state) => ({
             ...state, 
             nextUrl: response.data.next, 
@@ -37,7 +37,7 @@ function usePokemonList(url, type) {
 
             // passing that promise array to axios.all
             const pokemonData = await axios.all(pokemonResultsPromise); // array of 20 pokemon detailed data
-            console.log(pokemonData);
+           
 
             // now iterate on the data of each pokemon, and extract id, name, image, types
             const pokeListResults = pokemonData.map((pokeData) => {
